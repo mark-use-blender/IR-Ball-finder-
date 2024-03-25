@@ -33,7 +33,7 @@ def find_cir(con):
             (loc, (width, height), angle) = cv2.minAreaRect(contour)
             approx = cv2.approxPolyDP(contour,0.01*cv2.arcLength(contour,True),True)
             area = cv2.contourArea(contour)
-            if ((len(approx) > 8) & (area > 30) ):
+            if ((len(approx) > 8) & (area > 30) & 0.8<np.abs(width/height)<1.2):
                 balllist.append(contour,area,loc)
     return balllist
 
