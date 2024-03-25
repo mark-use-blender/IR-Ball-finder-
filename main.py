@@ -12,7 +12,14 @@ def nightime():
 
 
     return
-
+def go_up():
+    return
+def go_down():
+    return
+def go_left():
+    return
+def go_right():
+    return
 cam = cv2.VideoCapture(2)
 def find_cir(con):
     balllist = []
