@@ -24,7 +24,7 @@ def no_track():
     #notrack
     return
 
-cam = cv2.VideoCapture(2)
+
 
 def find_cir(con):
     balllist = []
@@ -37,7 +37,7 @@ def find_cir(con):
                 balllist.append(contour,area,loc)
     return balllist
 
-while (True):
+def core(cam):
     daytime()
     ret,dayimg= cam.read()
     nightime()
@@ -73,6 +73,9 @@ while (True):
                 go_right()
     else:
         no_track()
+cam = cv2.VideoCapture(2)
+while (True):
+    core(cam)
 
     
 
